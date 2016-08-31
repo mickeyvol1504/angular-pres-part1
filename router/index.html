@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Test">
+<head>
+	<meta charset="UTF-8">
+	<title>routing</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="common.js"></script>
+</head>
+<body>
+
+	<div>
+		<nav>
+			<a ui-sref="season">Season of years</a>
+			<a ui-sref="days">Days of week</a>
+			<a ui-sref="capitals">Capitals of country</a>
+		</nav>
+	</div>
+
+	<div ui-view></div>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Test">
+<head>
+	<meta charset="UTF-8">
+	<title>MVC from box</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="common.js"></script>
+</head>
+<body>
+
+	<div ng-controller="TestCtrl">
+
+		<button ng-click="sendRequest()">Запрос</button>
+
+		<ul>
+			<li ng-repeat="items in data">{{items.name}}</li>
+		</ul>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Test">
+<head>
+	<meta charset="UTF-8">
+	<title>Declarative style</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="common.js"></script>
+</head>
+<body>
+
+	<div ng-controller="TestCtrl">
+
+		{{today | date:'dd/MM/yyyy'}}
+
+		<input type="text" ng-model="query"><br>
+		<ul>
+			<li ng-repeat="items in data | filter:query">
+				<span>{{items.name}}</span>
+				<span>{{items.color}}</span>
+			</li>
+		</ul>
+
+	</div>
+
+</body>
+</html>

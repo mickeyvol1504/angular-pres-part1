@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+<body>
+
+	<ul></ul>
+	<input type="text">
+	
+	<script>
+		var data = [
+			{name:"summer", color: "green", weather: "warm"},
+			{name:"autum", color: "yellow", weather: "warm"},
+			{name:"winter", color: "white", weather: "cold"},
+			{name:"spring", color: "brown", weather: "warm"},
+		]
+
+		var list = $('ul');
+		for (var i=0; i<data.length; i++) {
+			list.append($("<li />").text(data[i].name));
+		}
+
+		$('input').keyup(function(){
+			$('li').each(function(i, elem){
+				if ($(this).text().indexOf($('input').val()) == -1){
+					$(this).css({'display':'none'});
+				} else {
+					$(this).css({'display':'block'});
+				}
+			})
+		})
+
+	</script>
+</body>
+</html>
